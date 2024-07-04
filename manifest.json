@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Codeforces and Leetcode Friends Tracker",
+  "version": "1.0",
+  "description": "Manage Friends and Questions on Codeforces and Leetcode",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "host_permissions": [
+    "https://ajax.googleapis.com/",
+    "https://codeforces.com/*",
+    "https://leetcode.com/*"
+  ],
+  "permissions": ["storage", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "24": "icon.png",
+      "32": "icon.png"
+    },
+    "default_title": "Codeforces and Leetcode Friends Tracker"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://codeforces.com/*", "https://leetcode.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "options_page": "options.html"
+}

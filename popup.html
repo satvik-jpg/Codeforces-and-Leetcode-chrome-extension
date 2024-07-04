@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Friend Manager</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+    .friend-list {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add a Friend</h1>
+  <input type="text" id="friend-name" placeholder="Friend's username">
+  <div>
+    <button id="codeforces-button" class="site-button">Codeforces</button>
+    <button id="leetcode-button" class="site-button">Leetcode</button>
+    <button id="add-friend">Add Friend</button>
+  </div>
+
+  <div class="friend-list">
+    <button id="show-codeforces-friends">Show Codeforces Friends</button>
+    <button id="show-leetcode-friends">Show Leetcode Friends</button>
+    <ul id="friends-list"></ul>
+  </div>
+
+  <div>
+    <button id="show-rating-changes">Show Rating Changes for Contest</button>
+    <button id="manage-friends">Manage Friends</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
