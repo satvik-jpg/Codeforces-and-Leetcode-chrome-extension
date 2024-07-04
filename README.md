@@ -1,4 +1,4 @@
-#Codeforces and Leetcode Chrome Extension
+<h1 align="center">Codeforces and Leetcode Chrome Extension</h1>
 This extension can let you add your friends, show their rating changes in a contest, and let you manage your friends list.
 
 #Setup: 
