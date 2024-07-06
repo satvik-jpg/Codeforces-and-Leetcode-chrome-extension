@@ -13,3 +13,13 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true; // Keep the message channel open for sendResponse
   }
 });
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  if (changeInfo.status === 'complete' && tab.url==='https://codeforces.com/') {
+    chrome.scripting.executeScript({
+      target: { tabId: tabId },
+      files: ['locker.js']
+    });
+  }
+});
+

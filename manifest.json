@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Codeforces and Leetcode Friends Tracker",
+  "name": "Codeforces/Leetcode Friends and ProblemTracker",
   "version": "1.0",
   "description": "Manage Friends and Questions on Codeforces and Leetcode",
   "icons": {
@@ -13,7 +13,7 @@
     "https://codeforces.com/*",
     "https://leetcode.com/*"
   ],
-  "permissions": ["storage", "activeTab"],
+  "permissions": ["storage", "activeTab","scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -23,10 +23,13 @@
     },
     "default_title": "Codeforces and Leetcode Friends Tracker"
   },
+  "background":{
+      "service_worker":"background.js"
+  },
   "content_scripts": [
     {
       "matches": ["https://codeforces.com/*", "https://leetcode.com/*"],
-      "js": ["content.js"],
+      "js": ["content.js","locker.js"],
       "css": ["styles.css"]
     }
   ],
